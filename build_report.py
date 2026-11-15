@@ -115,7 +115,7 @@ def norm_png(path):
 def build():
     a, b = load("part_a.json"), load("part_b.json")
     cfiles = [f for f in glob.glob(str(RESULTS / "part_c_*.json")) if "dummy" not in f]
-    c = json.load(open(sorted(cfiles)[0])) if cfiles else None
+    c = json.load(open(sorted(cfiles)[0], encoding="utf-8")) if cfiles else None
     architecture_png(RESULTS / "arch.png"); metric_png(b, RESULTS / "metrics.png"); norm_png(RESULTS / "norms.png")
     S = []
 
@@ -438,8 +438,8 @@ def build():
         S += [P(f"<b>Overall.</b> Mean key-fact coverage was <b>{rc:.2f}</b> with retrieved context versus <b>{nc:.2f}</b> without; "
                 f"RAG scored higher on {len(better)} of 10 queries ({', '.join(better) or 'none'}), tied or lower on "
                 f"{', '.join(notbetter) or 'none'}. RAG answers cited {sum(len(r['cited_valid']) for r in c['queries'])} record ids, all "
-                f"from the retrieved set ({inval} fabricated ids). Generation took {min(lat):.0f}-{max(lat):.0f} s per RAG answer on CPU "
-                f"(mean {np.mean(lat):.0f} s), because the ~1.2k-token context must be processed before the first output token.", B)]
+                f"from the retrieved set ({inval} fabricated ids). Generation took {min(lat):.0f}-{max(lat):.0f} s per RAG answer "
+                f"(mean {np.mean(lat):.0f} s) on the evaluation machine.", B)]
         if c["model"].startswith("llama3.2"):
             S += [P("<b>Factual correctness.</b> Without context the model produces generic, unverifiable or wrong content. For Q5 "
                     "it described a stampede at a 'Vellore Festival' in 2017 that is unrelated to our data; for Q8 it recommended "
@@ -448,26 +448,27 @@ def build():
                     "reported. With context the same model named the actual festivals, stages, sponsors and figures (NimbusPay "
                     "debits, the 40-minute delay on 11 July, Gate 3 flooding, 9 degrees after 10 pm, Rs 2500 taxi fares) and cited "
                     "the records they came from.", B),
-                  P("<b>Relevance and completeness.</b> RAG answers stayed on the question but were sometimes incomplete or padded. "
-                    "Q1 added a bullet on 'lack of security' taken from the second sentence of a mixed review - relevant to the record, "
-                    "not to the question. Q4 over-interpreted context: it presented the sound-curfew and strobe-light records as "
-                    "evidence of loud music, an inference the records do not support. Q8 correctly excluded one retrieved record, noting "
-                    "that it did not mention energy or crowd interaction.", B),
-                  P("<b>Consistency with the available information - failure cases.</b> Q9 is the clearest failure: the record "
-                    "ranked first in the context (blanket rental counter and bonfire pits) answers the 'what helped' half of the "
-                    "question, yet the model gave five near-identical bullets about the cold and then claimed blankets and "
-                    "bonfires were missing from the records. Its key-fact score is high, but the answer contradicts its own context. "
-                    "The X1 probe (ticket sales and revenue, which live in the Assignment-1 Ticket/Payment tables, not in feedback) "
-                    "was only partly handled: the model correctly said ticket prices were unavailable but treated each review as one "
-                    "ticket sold and reported 'Total: 4 tickets' - an unsupported answer that the insufficiency rule in the prompt "
-                    "should have prevented.", B),
+                  P("<b>Relevance and completeness.</b> RAG answers stayed on the question but were sometimes padded with material "
+                    "from the second sentence of mixed reviews. Q2 added 'poor crowd control' (too few security staff at Gate 1) and a "
+                    "'positive note' about MC Rapstar's set - true of the records but not about rain. Q4 over-interpreted context: it "
+                    "presented the sound-curfew and strobe-light records as evidence that the music was too loud, an inference the "
+                    "records do not support. Q8 was selective in the right way: it cited only the 4 records that describe crowd "
+                    "energy and left out the ones that do not.", B),
+                  P("<b>Consistency with the available information - failure cases.</b> Q9 found the right fact (blanket rental "
+                    "and bonfire pits, the top-ranked record) but then invented causal links from unrelated sentences in the same "
+                    "reviews: it claimed waste-segregation bins and Night Owl Collective's set 'helped attendees stay warm', and ended by "
+                    "saying no clear solutions were mentioned - contradicting its own second bullet. Q5 stated that record "
+                    "FB-07-04049 did not report the crush, although that record describes it. The X1 probe (ticket sales and revenue, "
+                    "which live in the Assignment-1 Ticket/Payment tables, not in feedback) was only partly handled: the model "
+                    "correctly said revenue could not be calculated, but treated each review as a ticket sold, counted some records "
+                    "under both VIP and General, and reported 'Total: 8 tickets' - an unsupported answer that the insufficiency rule in "
+                    "the prompt should have prevented.", B),
                   P("<b>Limits of the automatic score.</b> Key-fact coverage is a keyword check, so it under-rates some correct "
-                    "answers. Q10 scored 0.2 with context versus 0.4 without, but the RAG answer is accurate and balanced (good food, "
-                    "30-90 minute queues, stalls running out, about Rs 80 a meal), all cited; it simply did not use the exact words "
-                    "'GreenLeaf' or '45 minutes'. The no-context Q10 answer scored higher only because generic text happened to "
-                    "contain matching words such as 'healthy' and 'queue'. Q6 tied at 0.8: the no-context answer sounds plausible, but "
-                    "only the RAG answer reflects the actual mixed verdict (worth it at Bassline Retreat and Starlight; not worth it "
-                    "at Neon NYE Bash and Soundscape Beach Bash).", B)]
+                    "answers. Q10 scored only 0.4, but the RAG answer is accurate and balanced (good food, queues from under 15 to "
+                    "over 90 minutes, about Rs 80 a meal), all cited; it simply did not use the exact words '45 minutes' or 'ran out'. "
+                    "Its closing note that the records were insufficient was unnecessary. Q6 tied at 0.8: the no-context answer "
+                    "sounds plausible, but only the RAG answer reflects the actual mixed verdict (worth it at Bassline Retreat and "
+                    "Starlight Monsoon Carnival; not worth it at Neon NYE Bash and Soundscape Beach Bash).", B)]
         S += [P("<b>Insufficient-context probe X1 - full RAG answer:</b>", SM),
               P(esc(x1["answer"][:700]).replace("\n", "<br/>"), ParagraphStyle("ans2", parent=B, fontSize=8.3, leading=10.5,
                                                                               backColor=colors.HexColor("#fdeaea"), borderPadding=4))]
@@ -478,13 +479,15 @@ def build():
             "several distinct facts instead of five copies of one (Q2, Q3, Q7)."),
           P("<b>Limitations:</b> (1) answer quality is capped by retrieval - if the key record is outside the top-6 the model cannot "
             "use it, and when the top-6 is dominated by one repeated complaint (Q5, Q9) the answer becomes repetitive; (2) a 3B model "
-            "does not always use the context it is given (Q9) and sometimes draws inferences the records do not support (Q4); "
+            "sometimes links unrelated sentences in the context (Q9) or draws inferences the records do not support (Q4, Q5); "
             "(3) the insufficiency instruction was not reliably followed (X1) - a stricter prompt, a larger model or a separate "
             "'is this answerable?' check would help; (4) RAG summarises <i>samples</i>, not populations - it cannot count tickets "
             "or incidents, which belong in SQL/MongoDB from Assignment-1; (5) the static embedding model is weak on "
-            "negation/sentiment, so positive reviews leak into complaint queries unless a sentiment filter is applied; (6) CPU "
-            "latency of roughly 5-7 minutes per answer is too slow for interactive use - a GPU or a smaller quantised model is "
-            "needed; (7) the corpus is synthetic, so its wording is less varied than real reviews."),
+            "negation/sentiment, so positive reviews leak into complaint queries unless a sentiment filter is applied; (6) "
+            "latency depends heavily on hardware - about 5-12 s per answer in this run, but an earlier CPU-only run took 5-7 "
+            "minutes per answer, too slow for interactive use; (7) LLM output varies between runs even at temperature 0 (the "
+            "earlier run failed Q9 differently and counted 4 tickets for X1), so conclusions should be drawn from patterns, not "
+            "single answers; (8) the corpus is synthetic, so its wording is less varied than real reviews."),
           PageBreak()]
 
     # ---------------- 8 env, run, contributions, refs

@@ -153,7 +153,7 @@
       "text": "Exit routes were badly lit and people were pushing to get out after the last act. The Bassline Brothers set felt rushed, half the popular songs were skipped. Expected much better from a festival this size."
     }
   ],
-  "embed_seconds": 0.45,
+  "embed_seconds": 0.47,
   "embedding_shape": [
     5200,
     256
@@ -163,7 +163,7 @@
     "mean": 1.660847544670105,
     "max": 3.8713319301605225
   },
-  "insert_seconds": 3.41,
+  "insert_seconds": 4.23,
   "collection_count": 5200,
   "collection_metadata": {
     "embedding_model": "WordLlama l2_supercat (256-d)",
@@ -188,23 +188,23 @@
       "data": null,
       "metadatas": [
         {
-          "festival_name": "Vibe Collective Riverside Fest",
-          "genre": "Indie",
-          "severity": "NA",
-          "rating": 2,
-          "stage": "River Stage",
-          "month": 2,
-          "festival_id": 5,
           "author_role": "attendee",
-          "doc_type": "attendee_review",
+          "rating": 2,
           "sentiment": "negative",
+          "festival_name": "Vibe Collective Riverside Fest",
           "venue": "Riverside Grounds",
-          "organizer": "Vibe Collective",
-          "ticket_category": "General",
-          "event_date": "2026-02-02",
-          "city": "Delhi",
+          "doc_type": "attendee_review",
+          "artist": "Night Owl Collective",
+          "severity": "NA",
           "aspect": "cashless_payment",
-          "artist": "Night Owl Collective"
+          "stage": "River Stage",
+          "organizer": "Vibe Collective",
+          "month": 2,
+          "city": "Delhi",
+          "event_date": "2026-02-02",
+          "ticket_category": "General",
+          "festival_id": 5,
+          "genre": "Indie"
         }
       ]
     },
@@ -225,23 +225,23 @@
       "data": null,
       "metadatas": [
         {
-          "rating": 3,
-          "venue": "Riverside Grounds",
-          "author_role": "attendee",
-          "artist": "Night Owl Collective",
-          "festival_name": "Vibe Collective Riverside Fest",
-          "severity": "NA",
-          "doc_type": "attendee_review",
           "city": "Delhi",
-          "festival_id": 5,
-          "sentiment": "mixed",
+          "author_role": "attendee",
+          "doc_type": "attendee_review",
+          "rating": 3,
+          "month": 2,
+          "artist": "Night Owl Collective",
+          "venue": "Riverside Grounds",
           "aspect": "cashless_payment",
+          "sentiment": "mixed",
+          "genre": "Indie",
+          "festival_name": "Vibe Collective Riverside Fest",
+          "festival_id": 5,
+          "severity": "NA",
           "organizer": "Vibe Collective",
           "ticket_category": "General",
-          "month": 2,
-          "genre": "Indie",
-          "event_date": "2026-02-02",
-          "stage": "River Stage"
+          "stage": "River Stage",
+          "event_date": "2026-02-02"
         }
       ]
     },
