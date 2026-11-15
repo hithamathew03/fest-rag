@@ -1,0 +1,9 @@
+chromadb>=1.0
+wordllama>=0.4
+numpy
+pandas
+scikit-learn
+matplotlib
+reportlab
+# LLM: install Ollama (https://ollama.com) and run `ollama pull llama3.2:3b`
+# optional HF backend: transformers torch accelerate

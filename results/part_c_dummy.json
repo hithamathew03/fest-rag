@@ -1,0 +1,616 @@
+{
+  "backend": "dummy",
+  "model": "dummy",
+  "top_k": 6,
+  "n_candidates": 30,
+  "mmr_lambda": 0.5,
+  "system_prompt_rag": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.",
+  "system_prompt_plain": "You are a helpful assistant for music-festival organisers in India. Answer the question concisely in under 150 words.",
+  "queries": [
+    {
+      "retrieved": [
+        {
+          "id": "FB-05-04353",
+          "distance": 0.3792,
+          "festival": "Vibe Collective Riverside Fest",
+          "excerpt": "NimbusPay cashless wristbands failed to top up for hours on day 1 at Riverside Grounds; money was debited but balance showed zero. Toilets were cleaned regularl"
+        },
+        {
+          "id": "FB-07-01352",
+          "distance": 0.4712,
+          "festival": "Neon NYE Bash",
+          "excerpt": "Paying via the festival wristband was faster than carrying cash. Too few security staff at Gate 5; people were jumping the barricades. Some things worked, other"
+        },
+        {
+          "id": "FB-05-01502",
+          "distance": 0.449,
+          "festival": "Vibe Collective Riverside Fest",
+          "excerpt": "Wristband top-up failed three times and the money was deducted from my bank anyway. Not sure I will attend again."
+        },
+        {
+          "id": "FB-10-04287",
+          "distance": 0.481,
+          "festival": "Crescendo Classical",
+          "excerpt": "Attended all days. Unused wristband balance has still not been refunded weeks later. Hand-wash stations were stocked with soap and water throughout. Good music,"
+        },
+        {
+          "id": "FB-02-01040",
+          "distance": 0.4798,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Attended all days. Wristband top-up failed three times and the money was deducted from my bank anyway. The accessible toilet was locked for most of the day."
+        },
+        {
+          "id": "FB-05-01704",
+          "distance": 0.4593,
+          "festival": "Vibe Collective Riverside Fest",
+          "excerpt": "Came with my office group. NimbusPay cashless wristbands failed to top up for hours on day 1 at Riverside Grounds; money was debited but balance showed zero. To"
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-05-04353] (attendee_review; Vibe Collective Riverside Fest, Delhi; stage: River Stage; date: 2026-02-03; rating: 3; ticket: General)\nNimbusPay cashless wristbands failed to top up for hours on day 1 at Riverside Grounds; money was debited but balance showed zero. Toilets were cleaned regularly and there were enough of them.\n\n[FB-07-01352] (attendee_review; Neon NYE Bash, Chennai; stage: Countdown Dome; date: 2027-01-01; rating: 3; ticket: General)\nPaying via the festival wristband was faster than carrying cash. Too few security staff at Gate 5; people were jumping the barricades. Some things worked, others did not.\n\n[FB-05-01502] (attendee_review; Vibe Collective Riverside Fest, Delhi; stage: River Stage; date: 2026-02-03; rating: 1; ticket: General)\nWristband top-up failed three times and the money was deducted from my bank anyway. Not sure I will attend again.\n\n[FB-10-04287] (attendee_review; Crescendo Classical, Ahmedabad; stage: Sabarmati Stage; date: 2026-08-05; rating: 3; ticket: General)\nAttended all days. Unused wristband balance has still not been refunded weeks later. Hand-wash stations were stocked with soap and water throughout. Good music, poor management.\n\n[FB-02-01040] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: 2; ticket: VIP)\nAttended all days. Wristband top-up failed three times and the money was deducted from my bank anyway. The accessible toilet was locked for most of the day.\n\n[FB-05-01704] (attendee_review; Vibe Collective Riverside Fest, Delhi; stage: Indie Corner; date: 2026-02-01; rating: 1; ticket: General)\nCame with my office group. NimbusPay cashless wristbands failed to top up for hours on day 1 at Riverside Grounds; money was debited but balance showed zero. Too few security staff at Gate 3; people were jumping the barricades. Not sure I will attend again.\n\nQUESTION: Why were attendees unhappy with the cashless wristband payments and what happened to their money?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] jumping the barricades. Not sure I will attend again.\n\nQUESTION: Why were attendees unhappy with the cashless wristband payments and what happened to their money?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.0,
+      "says_insufficient": false,
+      "qid": "Q1",
+      "student": "Hitha Mathew P",
+      "text": "Why were attendees unhappy with the cashless wristband payments and what happened to their money?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] Why were attendees unhappy with the cashless wristband payments and what happened to their money?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.0
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-02-04061",
+          "distance": 0.438,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Sets on 11 July were delayed by about 40 minutes because of rain and DJ Tempest's set was cut short. Rain turned the ground into mud and there were no covered a"
+        },
+        {
+          "id": "FB-02-00214",
+          "distance": 0.6214,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Bought the pass on launch day. Waterlogging made the floor near the Grand Stage slippery and several people fell during MC Rapstar's set. Toilets were cleaned r"
+        },
+        {
+          "id": "FB-02-05271",
+          "distance": 0.593,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Ops log, 2026-07-12: Heavy monsoon rain on 11 July flooded the area near Gate 3 at Marine Arena, ankle-deep water at the entrance. Logged for post-event review."
+        },
+        {
+          "id": "FB-02-02830",
+          "distance": 0.6105,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Too few security staff at Gate 1; people were jumping the barricades. Rain turned the ground into mud and there were no covered areas. Expected much better from"
+        },
+        {
+          "id": "FB-02-05412",
+          "distance": 0.603,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Attended all days. MC Rapstar's high-energy set had the whole Grand Stage crowd jumping despite the rain. Rain turned the ground into mud and there were no cove"
+        },
+        {
+          "id": "FB-02-00114",
+          "distance": 0.606,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Attended all days. Food stalls had plenty of variety and the queues moved in under 30 minutes. Rain turned the ground into mud and there were no covered areas."
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-02-04061] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: 2; ticket: General)\nSets on 11 July were delayed by about 40 minutes because of rain and DJ Tempest's set was cut short. Rain turned the ground into mud and there were no covered areas.\n\n[FB-02-00214] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-10; rating: 3; ticket: General)\nBought the pass on launch day. Waterlogging made the floor near the Grand Stage slippery and several people fell during MC Rapstar's set. Toilets were cleaned regularly and there were enough of them. Some things worked, others did not.\n\n[FB-02-05271] (incident_report; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: n/a; ticket: NA)\nOps log, 2026-07-12: Heavy monsoon rain on 11 July flooded the area near Gate 3 at Marine Arena, ankle-deep water at the entrance. Logged for post-event review.\n\n[FB-02-02830] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-10; rating: 1; ticket: General)\nToo few security staff at Gate 1; people were jumping the barricades. Rain turned the ground into mud and there were no covered areas. Expected much better from a festival this size.\n\n[FB-02-05412] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: 3; ticket: General)\nAttended all days. MC Rapstar's high-energy set had the whole Grand Stage crowd jumping despite the rain. Rain turned the ground into mud and there were no covered areas. Good music, poor management.\n\n[FB-02-00114] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: 4; ticket: General)\nAttended all days. Food stalls had plenty of variety and the queues moved in under 30 minutes. Rain turned the ground into mud and there were no covered areas.\n\nQUESTION: How did heavy rain and waterlogging affect safety and the show schedule?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] r 30 minutes. Rain turned the ground into mud and there were no covered areas.\n\nQUESTION: How did heavy rain and waterlogging affect safety and the show schedule?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.0,
+      "says_insufficient": false,
+      "qid": "Q2",
+      "student": "Hitha Mathew P",
+      "text": "How did heavy rain and waterlogging affect safety and the show schedule?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] How did heavy rain and waterlogging affect safety and the show schedule?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.0
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-04-02594",
+          "distance": 0.5437,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Wheelchair access to Tech Stage was over uneven ground with no ramp. Shaded seating areas helped during the afternoon heat."
+        },
+        {
+          "id": "FB-06-02658",
+          "distance": 0.5617,
+          "festival": "Soundscape Beach Bash",
+          "excerpt": "No seating for elderly attendees anywhere near the stage. Too few security staff at Gate 1; people were jumping the barricades."
+        },
+        {
+          "id": "FB-03-00427",
+          "distance": 0.5764,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Went solo this year. The Heritage Stage path is cobblestone with steps; my father in a wheelchair could not reach it without being carried. The laser and LED vi"
+        },
+        {
+          "id": "FB-06-02715",
+          "distance": 0.5988,
+          "festival": "Soundscape Beach Bash",
+          "excerpt": "Ops log, 2026-12-30: Wheelchair user unable to reach Sunset Deck accessible platform; volunteers assisted manually."
+        },
+        {
+          "id": "FB-02-01107",
+          "distance": 0.5884,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Travelled from out of town for this. No seating for elderly attendees anywhere near the stage. Really disappointing for the price."
+        },
+        {
+          "id": "FB-04-01142",
+          "distance": 0.6084,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Ramps and wheelchair-friendly paths were provided to all main areas. The crowd near Tech Stage got dangerously packed and there was nowhere to move."
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-04-02594] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-06; rating: 3; ticket: General)\nWheelchair access to Tech Stage was over uneven ground with no ramp. Shaded seating areas helped during the afternoon heat.\n\n[FB-06-02658] (attendee_review; Soundscape Beach Bash, Goa; stage: Beach Stage; date: 2026-12-30; rating: 2; ticket: General)\nNo seating for elderly attendees anywhere near the stage. Too few security staff at Gate 1; people were jumping the barricades.\n\n[FB-03-00427] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Royal Stage; date: 2026-11-21; rating: 3; ticket: General)\nWent solo this year. The Heritage Stage path is cobblestone with steps; my father in a wheelchair could not reach it without being carried. The laser and LED visuals at Royal Stage were stunning and perfectly synced to the drops. Mixed experience overall.\n\n[FB-06-02715] (incident_report; Soundscape Beach Bash, Goa; stage: Sunset Deck; date: 2026-12-30; rating: n/a; ticket: NA)\nOps log, 2026-12-30: Wheelchair user unable to reach Sunset Deck accessible platform; volunteers assisted manually.\n\n[FB-02-01107] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: 1; ticket: General)\nTravelled from out of town for this. No seating for elderly attendees anywhere near the stage. Really disappointing for the price.\n\n[FB-04-01142] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-06; rating: 3; ticket: General)\nRamps and wheelchair-friendly paths were provided to all main areas. The crowd near Tech Stage got dangerously packed and there was nowhere to move.\n\nQUESTION: What problems did wheelchair users and elderly attendees face reaching the stages?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] ear Tech Stage got dangerously packed and there was nowhere to move.\n\nQUESTION: What problems did wheelchair users and elderly attendees face reaching the stages?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.2,
+      "says_insufficient": false,
+      "qid": "Q3",
+      "student": "Anurag Sharda",
+      "text": "What problems did wheelchair users and elderly attendees face reaching the stages?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] What problems did wheelchair users and elderly attendees face reaching the stages?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.2
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-09-05114",
+          "distance": 0.5382,
+          "festival": "Bassline Retreat",
+          "excerpt": "First festival with my kids. The Jungle Bass Tent at Bassline Retreat was painfully loud, my ears were ringing for two days. Expected much better from a festiva"
+        },
+        {
+          "id": "FB-01-00287",
+          "distance": 0.6862,
+          "festival": "EchoWave Summer Fest",
+          "excerpt": "Came with my office group. Sound bleed from the neighbouring stage ruined the quieter songs. Strobe lights were extremely intense with no warning for photosensi"
+        },
+        {
+          "id": "FB-09-05362",
+          "distance": 0.7014,
+          "festival": "Bassline Retreat",
+          "excerpt": "Because of the 10 pm sound curfew, Bassline Brothers' set was cut off mid-track and the crowd was furious. The shuttle from the city ran every 15 minutes and wa"
+        },
+        {
+          "id": "FB-09-00775",
+          "distance": 0.5747,
+          "festival": "Bassline Retreat",
+          "excerpt": "Sound bleed from the neighbouring stage ruined the quieter songs. Bassline Brothers brought out surprise collaborators and the crowd absolutely lost it."
+        },
+        {
+          "id": "FB-09-03893",
+          "distance": 0.668,
+          "festival": "Bassline Retreat",
+          "excerpt": "Bought the pass on launch day. Strobe lights were extremely intense with no warning for photosensitive people. Bassline Brothers played an extended encore and s"
+        },
+        {
+          "id": "FB-04-02173",
+          "distance": 0.7021,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Only made it for the last day. Sound bleed from the neighbouring stage ruined the quieter songs. Rain turned the ground into mud and there were no covered areas"
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-09-05114] (attendee_review; Bassline Retreat, Goa; stage: Jungle Bass Tent; date: 2026-10-17; rating: 2; ticket: VIP)\nFirst festival with my kids. The Jungle Bass Tent at Bassline Retreat was painfully loud, my ears were ringing for two days. Expected much better from a festival this size.\n\n[FB-01-00287] (attendee_review; EchoWave Summer Fest, Pune; stage: EDM Dome; date: 2026-03-16; rating: 2; ticket: Early-Bird)\nCame with my office group. Sound bleed from the neighbouring stage ruined the quieter songs. Strobe lights were extremely intense with no warning for photosensitive people. Not sure I will attend again.\n\n[FB-09-05362] (attendee_review; Bassline Retreat, Goa; stage: Beach Stage; date: 2026-10-16; rating: 2; ticket: General)\nBecause of the 10 pm sound curfew, Bassline Brothers' set was cut off mid-track and the crowd was furious. The shuttle from the city ran every 15 minutes and was well organised. Some things worked, others did not.\n\n[FB-09-00775] (attendee_review; Bassline Retreat, Goa; stage: Beach Stage; date: 2026-10-17; rating: 2; ticket: General)\nSound bleed from the neighbouring stage ruined the quieter songs. Bassline Brothers brought out surprise collaborators and the crowd absolutely lost it.\n\n[FB-09-03893] (attendee_review; Bassline Retreat, Goa; stage: Beach Stage; date: 2026-10-16; rating: 2; ticket: General)\nBought the pass on launch day. Strobe lights were extremely intense with no warning for photosensitive people. Bassline Brothers played an extended encore and spoke to the crowd between songs, felt very personal. Good music, poor management.\n\n[FB-04-02173] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-05; rating: 2; ticket: General)\nOnly made it for the last day. Sound bleed from the neighbouring stage ruined the quieter songs. Rain turned the ground into mud and there were no covered areas. Expected much better from a festival this size.\n\nQUESTION: Complaints that the music was so loud it hurt people's ears\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] d into mud and there were no covered areas. Expected much better from a festival this size.\n\nQUESTION: Complaints that the music was so loud it hurt people's ears\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.4,
+      "says_insufficient": false,
+      "qid": "Q4",
+      "student": "Anurag Sharda",
+      "text": "Complaints that the music was so loud it hurt people's ears",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] Complaints that the music was so loud it hurt people's ears",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.4
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-07-04655",
+          "distance": 0.4061,
+          "festival": "Neon NYE Bash",
+          "excerpt": "After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Screens at Countdown Dome w"
+        },
+        {
+          "id": "FB-07-04049",
+          "distance": 0.5659,
+          "festival": "Neon NYE Bash",
+          "excerpt": "After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Hand-wash stations were sto"
+        },
+        {
+          "id": "FB-07-01193",
+          "distance": 0.4984,
+          "festival": "Neon NYE Bash",
+          "excerpt": "Went solo this year. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Strobe"
+        },
+        {
+          "id": "FB-07-01180",
+          "distance": 0.5369,
+          "festival": "Neon NYE Bash",
+          "excerpt": "Attended all days. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Bag chec"
+        },
+        {
+          "id": "FB-07-01612",
+          "distance": 0.4855,
+          "festival": "Neon NYE Bash",
+          "excerpt": "Bought the pass on launch day. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main ga"
+        },
+        {
+          "id": "FB-07-01380",
+          "distance": 0.4345,
+          "festival": "Neon NYE Bash",
+          "excerpt": "Came with my office group. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate."
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-07-04655] (attendee_review; Neon NYE Bash, Chennai; stage: Countdown Dome; date: 2027-01-01; rating: 1; ticket: General)\nAfter the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Screens at Countdown Dome were too small to see from the middle of the crowd. Not sure I will attend again.\n\n[FB-07-04049] (attendee_review; Neon NYE Bash, Chennai; stage: NYE Main Stage; date: 2027-01-01; rating: 3; ticket: General)\nAfter the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Hand-wash stations were stocked with soap and water throughout. Good music, poor management.\n\n[FB-07-01193] (attendee_review; Neon NYE Bash, Chennai; stage: Countdown Dome; date: 2026-12-31; rating: 1; ticket: General)\nWent solo this year. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Strobe lights were extremely intense with no warning for photosensitive people.\n\n[FB-07-01180] (attendee_review; Neon NYE Bash, Chennai; stage: Countdown Dome; date: 2026-12-31; rating: 1; ticket: General)\nAttended all days. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. Bag checks were chaotic and they confiscated sealed water bottles. Not sure I will attend again.\n\n[FB-07-01612] (attendee_review; Neon NYE Bash, Chennai; stage: Countdown Dome; date: 2027-01-01; rating: 1; ticket: General)\nBought the pass on launch day. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate. The accessible toilet was locked for most of the day.\n\n[FB-07-01380] (attendee_review; Neon NYE Bash, Chennai; stage: Countdown Dome; date: 2027-01-01; rating: 1; ticket: VIP)\nCame with my office group. After the midnight countdown at Neon NYE Bash everyone rushed to the single exit and it became a dangerous crush near the main gate.\n\nQUESTION: What dangerous crowd crush happened when everyone tried to leave after the midnight countdown?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] exit and it became a dangerous crush near the main gate.\n\nQUESTION: What dangerous crowd crush happened when everyone tried to leave after the midnight countdown?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.6,
+      "says_insufficient": false,
+      "qid": "Q5",
+      "student": "Mahfuz Alam",
+      "text": "What dangerous crowd crush happened when everyone tried to leave after the midnight countdown?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] What dangerous crowd crush happened when everyone tried to leave after the midnight countdown?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.4
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-09-05260",
+          "distance": 0.4826,
+          "festival": "Bassline Retreat",
+          "excerpt": "Travelled from out of town for this. Complimentary food in the VIP area was genuinely good, not just snacks. Paying via the festival wristband was faster than c"
+        },
+        {
+          "id": "FB-09-01339",
+          "distance": 0.5162,
+          "festival": "Bassline Retreat",
+          "excerpt": "VIP lounge had comfortable seating, clean washrooms and a short bar queue - worth the upgrade. Organisers clearly learned from last year."
+        },
+        {
+          "id": "FB-02-01078",
+          "distance": 0.5914,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Came with my office group. The VIP viewing deck at Grand Stage gave a perfect sightline to the stage. Overall a great experience."
+        },
+        {
+          "id": "FB-07-02419",
+          "distance": 0.591,
+          "festival": "Neon NYE Bash",
+          "excerpt": "Went solo this year. Paid Rs 6500 for VIP and the lounge was overcrowded with no seats. Waited 90 minutes for a shuttle after the show ended; there were not eno"
+        },
+        {
+          "id": "FB-06-00563",
+          "distance": 0.5809,
+          "festival": "Soundscape Beach Bash",
+          "excerpt": "VIP lane at Gate 1 was closed, so we queued with everyone else. My QR ticket would not scan and the help desk had no way to verify it."
+        },
+        {
+          "id": "FB-06-03285",
+          "distance": 0.6365,
+          "festival": "Soundscape Beach Bash",
+          "excerpt": "Attended all days. VIP at Soundscape Beach Bash cost Rs 8000 and the cabana area was nice but drinks were still Rs 600 each - not worth it. Toilets were filthy "
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-09-05260] (attendee_review; Bassline Retreat, Goa; stage: Jungle Bass Tent; date: 2026-10-15; rating: 4; ticket: VIP)\nTravelled from out of town for this. Complimentary food in the VIP area was genuinely good, not just snacks. Paying via the festival wristband was faster than carrying cash. Totally worth the ticket price.\n\n[FB-09-01339] (attendee_review; Bassline Retreat, Goa; stage: Jungle Bass Tent; date: 2026-10-16; rating: 4; ticket: VIP)\nVIP lounge had comfortable seating, clean washrooms and a short bar queue - worth the upgrade. Organisers clearly learned from last year.\n\n[FB-02-01078] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-10; rating: 5; ticket: VIP)\nCame with my office group. The VIP viewing deck at Grand Stage gave a perfect sightline to the stage. Overall a great experience.\n\n[FB-07-02419] (attendee_review; Neon NYE Bash, Chennai; stage: NYE Main Stage; date: 2027-01-01; rating: 1; ticket: VIP)\nWent solo this year. Paid Rs 6500 for VIP and the lounge was overcrowded with no seats. Waited 90 minutes for a shuttle after the show ended; there were not enough buses. Really disappointing for the price.\n\n[FB-06-00563] (attendee_review; Soundscape Beach Bash, Goa; stage: Beach Stage; date: 2026-12-28; rating: 1; ticket: VIP)\nVIP lane at Gate 1 was closed, so we queued with everyone else. My QR ticket would not scan and the help desk had no way to verify it.\n\n[FB-06-03285] (attendee_review; Soundscape Beach Bash, Goa; stage: Beach Stage; date: 2026-12-29; rating: 1; ticket: VIP)\nAttended all days. VIP at Soundscape Beach Bash cost Rs 8000 and the cabana area was nice but drinks were still Rs 600 each - not worth it. Toilets were filthy by the evening and there was no water in the portable units.\n\nQUESTION: Was the VIP upgrade worth the money according to VIP ticket holders?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] . Toilets were filthy by the evening and there was no water in the portable units.\n\nQUESTION: Was the VIP upgrade worth the money according to VIP ticket holders?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.4,
+      "says_insufficient": false,
+      "qid": "Q6",
+      "student": "Mahfuz Alam",
+      "text": "Was the VIP upgrade worth the money according to VIP ticket holders?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] Was the VIP upgrade worth the money according to VIP ticket holders?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.4
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-08-00264",
+          "distance": 0.5499,
+          "festival": "Aura Indie Week",
+          "excerpt": "Waited 60 minutes for a shuttle after the show ended; there were not enough buses. Organisers need to fix this before next year."
+        },
+        {
+          "id": "FB-06-04578",
+          "distance": 0.6586,
+          "festival": "Soundscape Beach Bash",
+          "excerpt": "Local taxi union refused app cabs at Sunset Beach Arena and charged Rs 2500 for a 10 km ride. Drinking water stations were empty for most of the evening. Not su"
+        },
+        {
+          "id": "FB-01-03473",
+          "distance": 0.6575,
+          "festival": "EchoWave Summer Fest",
+          "excerpt": "Ops log, 2026-03-14: Shuttle fleet below plan after the last act; queue at pickup exceeded 75 minutes."
+        },
+        {
+          "id": "FB-03-00675",
+          "distance": 0.5549,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Waited 25 minutes for a shuttle after the show ended; there were not enough buses. Cashless top-ups were instant and refunds came back to my account the next da"
+        },
+        {
+          "id": "FB-04-04214",
+          "distance": 0.6183,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Went solo this year. Waited 90 minutes for a shuttle after the show ended; there were not enough buses. My QR ticket would not scan and the help desk had no way"
+        },
+        {
+          "id": "FB-01-03597",
+          "distance": 0.5821,
+          "festival": "EchoWave Summer Fest",
+          "excerpt": "Travelled from out of town for this. Waited 75 minutes for a shuttle after the show ended; there were not enough buses. Really disappointing for the price."
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-08-00264] (attendee_review; Aura Indie Week, Kolkata; stage: Maidan Main; date: 2026-04-12; rating: 1; ticket: General)\nWaited 60 minutes for a shuttle after the show ended; there were not enough buses. Organisers need to fix this before next year.\n\n[FB-06-04578] (attendee_review; Soundscape Beach Bash, Goa; stage: Beach Stage; date: 2026-12-28; rating: 2; ticket: General)\nLocal taxi union refused app cabs at Sunset Beach Arena and charged Rs 2500 for a 10 km ride. Drinking water stations were empty for most of the evening. Not sure I will attend again.\n\n[FB-01-03473] (incident_report; EchoWave Summer Fest, Pune; stage: Acoustic Tent; date: 2026-03-14; rating: n/a; ticket: NA)\nOps log, 2026-03-14: Shuttle fleet below plan after the last act; queue at pickup exceeded 75 minutes.\n\n[FB-03-00675] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Heritage Stage; date: 2026-11-20; rating: 2; ticket: General)\nWaited 25 minutes for a shuttle after the show ended; there were not enough buses. Cashless top-ups were instant and refunds came back to my account the next day. Some things worked, others did not.\n\n[FB-04-04214] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-06; rating: 1; ticket: General)\nWent solo this year. Waited 90 minutes for a shuttle after the show ended; there were not enough buses. My QR ticket would not scan and the help desk had no way to verify it.\n\n[FB-01-03597] (attendee_review; EchoWave Summer Fest, Pune; stage: Acoustic Tent; date: 2026-03-16; rating: 1; ticket: General)\nTravelled from out of town for this. Waited 75 minutes for a shuttle after the show ended; there were not enough buses. Really disappointing for the price.\n\nQUESTION: Problems getting home after the show: shuttle delays, no cabs and taxi overcharging\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] d; there were not enough buses. Really disappointing for the price.\n\nQUESTION: Problems getting home after the show: shuttle delays, no cabs and taxi overcharging\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.6,
+      "says_insufficient": false,
+      "qid": "Q7",
+      "student": "Nishar Ahamed A",
+      "text": "Problems getting home after the show: shuttle delays, no cabs and taxi overcharging",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] Problems getting home after the show: shuttle delays, no cabs and taxi overcharging",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.6
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-02-04517",
+          "distance": 0.584,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Only made it for the last day. MC Rapstar's high-energy set had the whole Grand Stage crowd jumping despite the rain. Mobile network held up well, we could vide"
+        },
+        {
+          "id": "FB-02-02387",
+          "distance": 0.6889,
+          "festival": "Starlight Monsoon Carnival",
+          "excerpt": "Came with my college friends. The Groove Mechanics brought out surprise collaborators and the crowd absolutely lost it. Never felt unsafe, even in the front pit"
+        },
+        {
+          "id": "FB-01-00202",
+          "distance": 0.6931,
+          "festival": "EchoWave Summer Fest",
+          "excerpt": "Came with my office group. The Blue Note Collective played an extended encore and spoke to the crowd between songs, felt very personal. Hand-wash stations were "
+        },
+        {
+          "id": "FB-05-01270",
+          "distance": 0.5973,
+          "festival": "Vibe Collective Riverside Fest",
+          "excerpt": "Night Owl Collective owned the stage and kept the crowd singing along for the entire set. The crowd near Indie Corner got dangerously packed and there was nowhe"
+        },
+        {
+          "id": "FB-04-02515",
+          "distance": 0.6942,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Came with my college friends. DJ Tempest's closing set on 6 September was relentless and the crowd stayed till the last beat. Totally worth the ticket price."
+        },
+        {
+          "id": "FB-03-03480",
+          "distance": 0.6441,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Kavya Strings Quartet played an extended encore and spoke to the crowd between songs, felt very personal."
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-02-04517] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-11; rating: 5; ticket: General)\nOnly made it for the last day. MC Rapstar's high-energy set had the whole Grand Stage crowd jumping despite the rain. Mobile network held up well, we could video call friends from the crowd.\n\n[FB-02-02387] (attendee_review; Starlight Monsoon Carnival, Mumbai; stage: Grand Stage; date: 2026-07-12; rating: 5; ticket: VIP)\nCame with my college friends. The Groove Mechanics brought out surprise collaborators and the crowd absolutely lost it. Never felt unsafe, even in the front pit during the headliner.\n\n[FB-01-00202] (attendee_review; EchoWave Summer Fest, Pune; stage: EDM Dome; date: 2026-03-16; rating: 5; ticket: Early-Bird)\nCame with my office group. The Blue Note Collective played an extended encore and spoke to the crowd between songs, felt very personal. Hand-wash stations were stocked with soap and water throughout.\n\n[FB-05-01270] (attendee_review; Vibe Collective Riverside Fest, Delhi; stage: Indie Corner; date: 2026-02-01; rating: 4; ticket: General)\nNight Owl Collective owned the stage and kept the crowd singing along for the entire set. The crowd near Indie Corner got dangerously packed and there was nowhere to move. Good music, poor management.\n\n[FB-04-02515] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-05; rating: 4; ticket: General)\nCame with my college friends. DJ Tempest's closing set on 6 September was relentless and the crowd stayed till the last beat. Totally worth the ticket price.\n\n[FB-03-03480] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Heritage Stage; date: 2026-11-20; rating: 5; ticket: General)\nKavya Strings Quartet played an extended encore and spoke to the crowd between songs, felt very personal.\n\nQUESTION: Which artist sets did the crowd love most for energy and crowd interaction?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] n extended encore and spoke to the crowd between songs, felt very personal.\n\nQUESTION: Which artist sets did the crowd love most for energy and crowd interaction?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.6,
+      "says_insufficient": false,
+      "qid": "Q8",
+      "student": "Nishar Ahamed A",
+      "text": "Which artist sets did the crowd love most for energy and crowd interaction?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] Which artist sets did the crowd love most for energy and crowd interaction?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.4
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-03-02907",
+          "distance": 0.5833,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "The blanket rental counter and bonfire pits near the Royal Stage made the cold nights cosy."
+        },
+        {
+          "id": "FB-03-00732",
+          "distance": 0.6211,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Went solo this year. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. Medical tents were clearly ma"
+        },
+        {
+          "id": "FB-03-00213",
+          "distance": 0.6049,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Only made it for the last day. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. Waste segregation b"
+        },
+        {
+          "id": "FB-03-01415",
+          "distance": 0.6624,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Travelled from out of town for this. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. The laser and"
+        },
+        {
+          "id": "FB-03-04175",
+          "distance": 0.6219,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Attended all days. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. No cabs available after midnigh"
+        },
+        {
+          "id": "FB-03-03633",
+          "distance": 0.5971,
+          "festival": "Soundscape Desert Nights",
+          "excerpt": "Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. Night Owl Collective brought out surprise collabor"
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-03-02907] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Royal Stage; date: 2026-11-20; rating: 4; ticket: VIP)\nThe blanket rental counter and bonfire pits near the Royal Stage made the cold nights cosy.\n\n[FB-03-00732] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Heritage Stage; date: 2026-11-21; rating: 3; ticket: General)\nWent solo this year. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. Medical tents were clearly marked and volunteers responded quickly when someone fainted. Good music, poor management.\n\n[FB-03-00213] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Heritage Stage; date: 2026-11-20; rating: 3; ticket: VIP)\nOnly made it for the last day. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. Waste segregation bins were everywhere and the grounds stayed clean all evening. Some things worked, others did not.\n\n[FB-03-01415] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Heritage Stage; date: 2026-11-22; rating: 3; ticket: General)\nTravelled from out of town for this. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. The laser and LED visuals at Heritage Stage were stunning and perfectly synced to the drops. Mixed experience overall.\n\n[FB-03-04175] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Royal Stage; date: 2026-11-21; rating: 2; ticket: VIP)\nAttended all days. Desert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. No cabs available after midnight and surge pricing was insane.\n\n[FB-03-03633] (attendee_review; Soundscape Desert Nights, Jaipur; stage: Royal Stage; date: 2026-11-22; rating: 3; ticket: VIP)\nDesert nights at Palace Lawns got very cold after 10 pm, nearly 9 degrees, and many people were not prepared. Night Owl Collective brought out surprise collaborators and the crowd absolutely lost it. Mixed experience overall.\n\nQUESTION: How did the cold desert nights affect attendees and what helped them stay warm?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] llaborators and the crowd absolutely lost it. Mixed experience overall.\n\nQUESTION: How did the cold desert nights affect attendees and what helped them stay warm?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.4,
+      "says_insufficient": false,
+      "qid": "Q9",
+      "student": "Ansel Jo Paul",
+      "text": "How did the cold desert nights affect attendees and what helped them stay warm?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] How did the cold desert nights affect attendees and what helped them stay warm?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.4
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-04-00962",
+          "distance": 0.507,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Bought the pass on launch day. GreenLeaf food court queues crossed 45 minutes during DJ Nova's set and they ran out of wraps by 8 pm. Garbage was piling up near"
+        },
+        {
+          "id": "FB-04-05101",
+          "distance": 0.5106,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Loved the regional food court, prices were fair for a festival at around Rs 80 a meal. Overall a great experience."
+        },
+        {
+          "id": "FB-04-03703",
+          "distance": 0.6093,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Food stalls had plenty of variety and the queues moved in under 15 minutes. Bag checks were chaotic and they confiscated sealed water bottles."
+        },
+        {
+          "id": "FB-04-04755",
+          "distance": 0.5386,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Third time attending. Food queues were over 90 minutes and several stalls ran out of food by 9 pm. Unused wristband balance has still not been refunded weeks la"
+        },
+        {
+          "id": "FB-04-01917",
+          "distance": 0.6299,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Came with my college friends. GreenLeaf Foods court had healthy bowls and millet wraps, genuinely good festival food. Dedicated drop-off zone for cabs made arri"
+        },
+        {
+          "id": "FB-04-03994",
+          "distance": 0.5233,
+          "festival": "Rhythm Nation Tech Beats",
+          "excerpt": "Went solo this year. Food queues were over 30 minutes and several stalls ran out of food by 9 pm. Shaded seating areas helped during the afternoon heat. Good mu"
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-04-00962] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-05; rating: 1; ticket: General)\nBought the pass on launch day. GreenLeaf food court queues crossed 45 minutes during DJ Nova's set and they ran out of wraps by 8 pm. Garbage was piling up near the food court and nobody was clearing it. Really disappointing for the price.\n\n[FB-04-05101] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-05; rating: 5; ticket: General)\nLoved the regional food court, prices were fair for a festival at around Rs 80 a meal. Overall a great experience.\n\n[FB-04-03703] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-06; rating: 4; ticket: General)\nFood stalls had plenty of variety and the queues moved in under 15 minutes. Bag checks were chaotic and they confiscated sealed water bottles.\n\n[FB-04-04755] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-06; rating: 1; ticket: General)\nThird time attending. Food queues were over 90 minutes and several stalls ran out of food by 9 pm. Unused wristband balance has still not been refunded weeks later. Expected much better from a festival this size.\n\n[FB-04-01917] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-05; rating: 4; ticket: General)\nCame with my college friends. GreenLeaf Foods court had healthy bowls and millet wraps, genuinely good festival food. Dedicated drop-off zone for cabs made arrival easy. Totally worth the ticket price.\n\n[FB-04-03994] (attendee_review; Rhythm Nation Tech Beats, Bengaluru; stage: Tech Stage; date: 2026-09-05; rating: 2; ticket: VIP)\nWent solo this year. Food queues were over 30 minutes and several stalls ran out of food by 9 pm. Shaded seating areas helped during the afternoon heat. Good music, poor management.\n\nQUESTION: What did people say about food quality, queue times and prices at the food court?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only]  areas helped during the afternoon heat. Good music, poor management.\n\nQUESTION: What did people say about food quality, queue times and prices at the food court?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": 0.2,
+      "says_insufficient": false,
+      "qid": "Q10",
+      "student": "Ansel Jo Paul",
+      "text": "What did people say about food quality, queue times and prices at the food court?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] What did people say about food quality, queue times and prices at the food court?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": 0.2
+    },
+    {
+      "retrieved": [
+        {
+          "id": "FB-10-03140",
+          "distance": 0.5525,
+          "festival": "Crescendo Classical",
+          "excerpt": "Came with my office group. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Even from the far side of Riverfr"
+        },
+        {
+          "id": "FB-10-03366",
+          "distance": 0.6221,
+          "festival": "Crescendo Classical",
+          "excerpt": "Only made it for the last day. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. The laser and LED visuals at "
+        },
+        {
+          "id": "FB-10-04262",
+          "distance": 0.6093,
+          "festival": "Crescendo Classical",
+          "excerpt": "Debrief (Sabarmati Stage, 2026-08-06): VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Vendor contract to be"
+        },
+        {
+          "id": "FB-10-05325",
+          "distance": 0.5975,
+          "festival": "Crescendo Classical",
+          "excerpt": "First festival with my kids. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Toilets were cleaned regularly "
+        },
+        {
+          "id": "FB-10-05011",
+          "distance": 0.6621,
+          "festival": "Crescendo Classical",
+          "excerpt": "Third time attending. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Lighting design for Sufi Roots Ensembl"
+        },
+        {
+          "id": "FB-10-04239",
+          "distance": 0.6006,
+          "festival": "Crescendo Classical",
+          "excerpt": "Travelled from out of town for this. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Sound engineers kept th"
+        }
+      ],
+      "used_filter": true,
+      "prompt": "You are FestiVox, an analyst assistant for music-festival organisers. Answer the question using ONLY the feedback records in the CONTEXT. Rules:\n1. Every factual statement must cite its source record id in square brackets, e.g. [FB-05-00123].\n2. Do not use outside knowledge and do not invent numbers, names or dates that are not in the context.\n3. If the context does not contain enough information to answer, say exactly: \"The retrieved records do not contain enough information to answer this.\" and state what is missing.\n4. Mention which festival(s) each point comes from. Keep the answer under 150 words, as short bullet points.\n\nCONTEXT:\n[FB-10-03140] (attendee_review; Crescendo Classical, Ahmedabad; stage: Sabarmati Stage; date: 2026-08-05; rating: 5; ticket: VIP)\nCame with my office group. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Even from the far side of Riverfront Amphitheatre the audio was clear and well-timed with the screens. Totally worth the ticket price.\n\n[FB-10-03366] (attendee_review; Crescendo Classical, Ahmedabad; stage: Baithak Hall; date: 2026-08-06; rating: 5; ticket: General)\nOnly made it for the last day. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. The laser and LED visuals at Baithak Hall were stunning and perfectly synced to the drops.\n\n[FB-10-04262] (staff_debrief; Crescendo Classical, Ahmedabad; stage: Sabarmati Stage; date: 2026-08-06; rating: n/a; ticket: NA)\nDebrief (Sabarmati Stage, 2026-08-06): VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Vendor contract to be reviewed.\n\n[FB-10-05325] (attendee_review; Crescendo Classical, Ahmedabad; stage: Baithak Hall; date: 2026-08-06; rating: 4; ticket: General)\nFirst festival with my kids. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Toilets were cleaned regularly and there were enough of them.\n\n[FB-10-05011] (attendee_review; Crescendo Classical, Ahmedabad; stage: Sabarmati Stage; date: 2026-08-06; rating: 5; ticket: General)\nThird time attending. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Lighting design for Sufi Roots Ensemble created a magical atmosphere. Overall a great experience.\n\n[FB-10-04239] (attendee_review; Crescendo Classical, Ahmedabad; stage: Sabarmati Stage; date: 2026-08-05; rating: 5; ticket: VIP)\nTravelled from out of town for this. VIP pass at Crescendo Classical included a meet-and-greet with The Blue Note Collective - worth it. Sound engineers kept the levels balanced all evening, vocals never got buried under the drums. Totally worth the ticket price.\n\nQUESTION: How many tickets were sold for Crescendo Classical and what was the total revenue?\n\nANSWER (with [record-id] citations):",
+      "answer": "[DUMMY BACKEND - plumbing test only] ls never got buried under the drums. Totally worth the ticket price.\n\nQUESTION: How many tickets were sold for Crescendo Classical and what was the total revenue?\n\nANSWER (with [record-id] citations):",
+      "seconds": 0.0,
+      "cited": [],
+      "cited_valid": [],
+      "cited_invalid": [],
+      "fact_coverage": null,
+      "says_insufficient": false,
+      "qid": "X1",
+      "student": "(test)",
+      "text": "How many tickets were sold for Crescendo Classical and what was the total revenue?",
+      "no_context_answer": "[DUMMY BACKEND - plumbing test only] How many tickets were sold for Crescendo Classical and what was the total revenue?",
+      "no_context_seconds": 0.0,
+      "no_context_fact_coverage": null
+    }
+  ]
+}

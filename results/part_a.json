@@ -1,0 +1,265 @@
+{
+  "records_raw": 5200,
+  "records_clean": 5200,
+  "doc_type_counts": {
+    "attendee_review": 4220,
+    "incident_report": 600,
+    "staff_debrief": 380
+  },
+  "festival_counts": {
+    "EchoWave Summer Fest": 722,
+    "Starlight Monsoon Carnival": 595,
+    "Vibe Collective Riverside Fest": 589,
+    "Soundscape Desert Nights": 532,
+    "Neon NYE Bash": 504,
+    "Soundscape Beach Bash": 480,
+    "Rhythm Nation Tech Beats": 466,
+    "Aura Indie Week": 464,
+    "Bassline Retreat": 464,
+    "Crescendo Classical": 384
+  },
+  "aspect_counts": {
+    "performance": 631,
+    "weather": 606,
+    "crowd_safety": 508,
+    "sound": 467,
+    "transport": 455,
+    "cashless_payment": 376,
+    "food_beverage": 375,
+    "ticketing_entry": 374,
+    "lighting_visuals": 325,
+    "hygiene": 320,
+    "accessibility": 301,
+    "connectivity": 269,
+    "vip_experience": 193
+  },
+  "rating_counts": {
+    "1": 678,
+    "2": 966,
+    "3": 884,
+    "4": 751,
+    "5": 941
+  },
+  "avg_chars": 183.09269230769232,
+  "sample_records": [
+    {
+      "doc_id": "FB-10-04083",
+      "doc_type": "attendee_review",
+      "festival_id": 10,
+      "festival_name": "Crescendo Classical",
+      "organizer": "Crescendo Events",
+      "city": "Ahmedabad",
+      "venue": "Riverfront Amphitheatre",
+      "stage": "Baithak Hall",
+      "artist": "Sufi Roots Ensemble",
+      "genre": "Folk/Sufi",
+      "event_date": "2026-08-06",
+      "month": 8,
+      "ticket_category": "VIP",
+      "rating": 3,
+      "sentiment": "mixed",
+      "aspect": "weather",
+      "aspect2": "accessibility",
+      "severity": "NA",
+      "author_role": "attendee",
+      "text": "The air-conditioning in Baithak Hall failed on 6 August and the hall became unbearably stuffy during the Sufi Roots Ensemble set. Sign-language interpreters at Baithak Hall were a thoughtful touch."
+    },
+    {
+      "doc_id": "FB-10-00873",
+      "doc_type": "attendee_review",
+      "festival_id": 10,
+      "festival_name": "Crescendo Classical",
+      "organizer": "Crescendo Events",
+      "city": "Ahmedabad",
+      "venue": "Riverfront Amphitheatre",
+      "stage": "Baithak Hall",
+      "artist": "Sufi Roots Ensemble",
+      "genre": "Folk/Sufi",
+      "event_date": "2026-08-05",
+      "month": 8,
+      "ticket_category": "General",
+      "rating": 2,
+      "sentiment": "negative",
+      "aspect": "weather",
+      "aspect2": "hygiene",
+      "severity": "NA",
+      "author_role": "attendee",
+      "text": "Bought the pass on launch day. The air-conditioning in Baithak Hall failed on 6 August and the hall became unbearably stuffy during the Sufi Roots Ensemble set. Garbage was piling up near the food court and nobody was clearing it. Organisers need to fix this before next year."
+    },
+    {
+      "doc_id": "FB-02-03387",
+      "doc_type": "incident_report",
+      "festival_id": 2,
+      "festival_name": "Starlight Monsoon Carnival",
+      "organizer": "Starlight Productions",
+      "city": "Mumbai",
+      "venue": "Marine Arena",
+      "stage": "Grand Stage",
+      "artist": "MC Rapstar",
+      "genre": "Hip-Hop",
+      "event_date": "2026-07-12",
+      "month": 7,
+      "ticket_category": "NA",
+      "rating": 0,
+      "sentiment": "negative",
+      "aspect": "crowd_safety",
+      "aspect2": "none",
+      "severity": "low",
+      "author_role": "security/ops",
+      "text": "Ops log, 2026-07-12: Two attendees treated for exhaustion at Grand Stage front pit; extra water distributed. Status: monitoring."
+    },
+    {
+      "doc_id": "FB-03-01547",
+      "doc_type": "attendee_review",
+      "festival_id": 3,
+      "festival_name": "Soundscape Desert Nights",
+      "organizer": "Soundscape Live",
+      "city": "Jaipur",
+      "venue": "Palace Lawns",
+      "stage": "Heritage Stage",
+      "artist": "Sufi Roots Ensemble",
+      "genre": "Folk/Sufi",
+      "event_date": "2026-11-20",
+      "month": 11,
+      "ticket_category": "General",
+      "rating": 4,
+      "sentiment": "positive",
+      "aspect": "lighting_visuals",
+      "aspect2": "connectivity",
+      "severity": "NA",
+      "author_role": "attendee",
+      "text": "Only made it for the last day. The laser and LED visuals at Heritage Stage were stunning and perfectly synced to the drops. Free festival Wi-Fi worked fine near the food court. Organisers clearly learned from last year."
+    },
+    {
+      "doc_id": "FB-04-03754",
+      "doc_type": "attendee_review",
+      "festival_id": 4,
+      "festival_name": "Rhythm Nation Tech Beats",
+      "organizer": "Rhythm Nation Inc",
+      "city": "Bengaluru",
+      "venue": "Tech Park Amphitheatre",
+      "stage": "Tech Stage",
+      "artist": "Bassline Brothers",
+      "genre": "EDM",
+      "event_date": "2026-09-05",
+      "month": 9,
+      "ticket_category": "General",
+      "rating": 2,
+      "sentiment": "negative",
+      "aspect": "crowd_safety",
+      "aspect2": "performance",
+      "severity": "NA",
+      "author_role": "attendee",
+      "text": "Exit routes were badly lit and people were pushing to get out after the last act. The Bassline Brothers set felt rushed, half the popular songs were skipped. Expected much better from a festival this size."
+    }
+  ],
+  "embed_seconds": 0.45,
+  "embedding_shape": [
+    5200,
+    256
+  ],
+  "norm_stats": {
+    "min": 1.0564771890640259,
+    "mean": 1.660847544670105,
+    "max": 3.8713319301605225
+  },
+  "insert_seconds": 3.41,
+  "collection_count": 5200,
+  "collection_metadata": {
+    "embedding_model": "WordLlama l2_supercat (256-d)",
+    "description": "FestiVox attendee reviews, incident reports and staff debriefs",
+    "hnsw:space": "cosine"
+  },
+  "crud": {
+    "count_after_insert": 5201,
+    "read_by_id": {
+      "ids": [
+        "FB-05-NEW001"
+      ],
+      "embeddings": null,
+      "documents": [
+        "NimbusPay wristband refund finally arrived 3 weeks after Riverside Fest, but only after I raised a complaint on social media."
+      ],
+      "uris": null,
+      "included": [
+        "documents",
+        "metadatas"
+      ],
+      "data": null,
+      "metadatas": [
+        {
+          "festival_name": "Vibe Collective Riverside Fest",
+          "genre": "Indie",
+          "severity": "NA",
+          "rating": 2,
+          "stage": "River Stage",
+          "month": 2,
+          "festival_id": 5,
+          "author_role": "attendee",
+          "doc_type": "attendee_review",
+          "sentiment": "negative",
+          "venue": "Riverside Grounds",
+          "organizer": "Vibe Collective",
+          "ticket_category": "General",
+          "event_date": "2026-02-02",
+          "city": "Delhi",
+          "aspect": "cashless_payment",
+          "artist": "Night Owl Collective"
+        }
+      ]
+    },
+    "read_by_metadata_count": 187,
+    "after_update": {
+      "ids": [
+        "FB-05-NEW001"
+      ],
+      "embeddings": null,
+      "documents": [
+        "NimbusPay wristband refund finally arrived 3 weeks after Riverside Fest, but only after I raised a complaint on social media. Update: the organiser has now also given a free pass for next year as an apology."
+      ],
+      "uris": null,
+      "included": [
+        "documents",
+        "metadatas"
+      ],
+      "data": null,
+      "metadatas": [
+        {
+          "rating": 3,
+          "venue": "Riverside Grounds",
+          "author_role": "attendee",
+          "artist": "Night Owl Collective",
+          "festival_name": "Vibe Collective Riverside Fest",
+          "severity": "NA",
+          "doc_type": "attendee_review",
+          "city": "Delhi",
+          "festival_id": 5,
+          "sentiment": "mixed",
+          "aspect": "cashless_payment",
+          "organizer": "Vibe Collective",
+          "ticket_category": "General",
+          "month": 2,
+          "genre": "Indie",
+          "event_date": "2026-02-02",
+          "stage": "River Stage"
+        }
+      ]
+    },
+    "after_delete": {
+      "ids": [],
+      "embeddings": null,
+      "documents": [],
+      "uris": null,
+      "included": [
+        "metadatas",
+        "documents"
+      ],
+      "data": null,
+      "metadatas": []
+    },
+    "count_after_delete": 5200,
+    "bulk_delete_removed": 31,
+    "count_after_bulk_delete": 5169,
+    "count_after_restore": 5200
+  }
+}
